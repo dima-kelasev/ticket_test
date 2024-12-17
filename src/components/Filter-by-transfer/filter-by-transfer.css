@@ -1,0 +1,23 @@
+.filterByTransferBox {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.filterByTransferBox p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.filterByTransferContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.filterByTransferContainer p {
+  cursor: pointer;
+}

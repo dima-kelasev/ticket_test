@@ -1,0 +1,43 @@
+import logo from '../assets/png/logo2.png';
+
+export const TICKETS = [
+  {
+    price: 21032,
+    arrive: '11:45',
+    departure: '09:00',
+    departureCity: 'Владивосток',
+    arriveCity: 'Тель-Авив',
+    departureAirPortCode: 'VVO',
+    arriveAirPortCode: 'TLV',
+    departureDate: '9 окт 2018, Пт',
+    arriveDate: '10 окт 2018, Пт',
+    transfer: ['Barcelona'],
+    img: logo,
+  },
+  {
+    price: 22245,
+    arrive: '12:34',
+    departure: '10:35',
+    departureCity: 'Владивосток',
+    arriveCity: 'Тель-Авив',
+    departureAirPortCode: 'VVO',
+    arriveAirPortCode: 'TLV',
+    departureDate: '9 окт 2018, Пт',
+    arriveDate: '10 окт 2018, Пт',
+    transfer: ['Barcelona', 'Rim'],
+    img: logo,
+  },
+  {
+    price: 22245,
+    arrive: '15:40',
+    departure: '11:35',
+    departureCity: 'Владивосток',
+    arriveCity: 'Тель-Авив',
+    departureAirPortCode: 'VVO',
+    arriveAirPortCode: 'TLV',
+    departureDate: '9 окт 2018, Пт',
+    arriveDate: '10 окт 2018, Пт',
+    transfer: ['Barcelona', 'Rim', 'Paris'],
+    img: logo,
+  },
+];

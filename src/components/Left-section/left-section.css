@@ -1,0 +1,50 @@
+.LeftSectionItemContainer {
+  width: 20%;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.itemBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rightSection {
+  width: 60%;
+  display: flex;
+}
+
+.itemImg {
+  width: 100%;
+}
+
+.itemBtn {
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.itemBtn p {
+  margin: 0;
+  color: #fff;
+}
+
+.btnText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
