@@ -1,4 +1,5 @@
 import { FILTER_BY_PRICE } from '../types/filte-by-price.type';
+import { convertSum } from './convert-sum.helper';
 
 type TConvertPrice = {
   filterByCurrency: FILTER_BY_PRICE;
@@ -9,11 +10,11 @@ export const convertPrice = ({ filterByCurrency, price }: TConvertPrice) => {
   switch (filterByCurrency) {
     case FILTER_BY_PRICE.USD:
       const dollarSum = price / 100;
-      return `${dollarSum.toFixed()} $`;
+      return convertSum(dollarSum, 'USD');
     case FILTER_BY_PRICE.EUR:
       const eurSum = price / 105;
-      return `${eurSum.toFixed()} €`;
+      return convertSum(eurSum, 'EUR');
     default:
-      return `${price.toFixed()} ₽`;
+      return convertSum(price, 'RUB');
   }
 };

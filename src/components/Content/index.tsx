@@ -3,22 +3,23 @@ import { FiltersBar } from '../Filters-bar/filters-bar.component';
 import { TicketList } from '../Ticket-ist/ticket-list.component';
 import './index.css';
 import { FILTER_BY_PRICE } from '../../types/filte-by-price.type';
-import { FILTER_BY_TRANSFER } from '../../types/filter-by-transfer.type';
 
 export const Content = () => {
   const [filterByCurrency, setFilterByCurrency] = useState(FILTER_BY_PRICE.RUB);
-  const [filterByTransfer, setFilterByTransfer] = useState<
-    FILTER_BY_TRANSFER | string[]
-  >(['']);
+  const [filterByTransfer, setFilterByTransfer] = useState<string[]>(['all']);
 
   return (
     <div className="container">
       <FiltersBar
         filterByCurrency={filterByCurrency}
         setFilterByCurrency={setFilterByCurrency}
+        filterByTransfer={filterByTransfer}
         setFilterByTransfer={setFilterByTransfer}
       />
-      <TicketList filterByCurrency={filterByCurrency} />
+      <TicketList
+        filterByCurrency={filterByCurrency}
+        filterByTransfer={filterByTransfer}
+      />
     </div>
   );
 };

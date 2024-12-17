@@ -1,33 +1,31 @@
 import { Dispatch, SetStateAction } from 'react';
-import { CHECKBOXES } from '../../consts/check-boxes.const';
-import { FILTER_BY_TRANSFER } from '../../types/filter-by-transfer.type';
+import { CHECKBOXES_OPTIONS } from '../../consts/check-boxes.const';
 import './filter-by-transfer.css';
+import { Checkbox, Typography } from 'antd';
+
+const { Text } = Typography;
 
 type TFilterByTransfer = {
-  setFilterByTransfer: Dispatch<SetStateAction<FILTER_BY_TRANSFER | string[]>>;
+  filterByTransfer: string[];
+  setFilterByTransfer: Dispatch<SetStateAction<string[]>>;
 };
 
 export const FilterByTransfer = ({
+  filterByTransfer,
   setFilterByTransfer,
 }: TFilterByTransfer) => {
-  //   const handleAddFilter = (value: FILTER_BY_TRANSFER) => [
-  //     setFilterByTransfer((prev) => {
-  //       return {
-  //         ...prev,
-  //         value,
-  //       };
-  //     }),
-  //   ];
+  const onChange = (checkedValues: string[]) => {
+    setFilterByTransfer(checkedValues);
+  };
   return (
     <div className="filterByTransferBox">
-      <p>КОЛИЧЕТСВО ПЕРЕСАДОК</p>
-      <div className="filterByTransferContainer">
-        {/* {CHECKBOXES.map((item) => (
-          <p onClick={() => handleAddFilter(item.value)} key={item.id}>
-            {item.title}
-          </p>
-        ))} */}
-      </div>
+      <Text>КОЛИЧЕТСВО ПЕРЕСАДОК</Text>
+      <Checkbox.Group
+        options={CHECKBOXES_OPTIONS}
+        onChange={onChange}
+        value={filterByTransfer}
+      />
+      <div className="filterByTransferContainer"></div>
     </div>
   );
 };

@@ -3,6 +3,19 @@ import logo from '../assets/png/logo2.png';
 export const TICKETS = [
   {
     price: 21032,
+    arrive: '10:45',
+    departure: '08:00',
+    departureCity: 'Владивосток',
+    arriveCity: 'Тель-Авив',
+    departureAirPortCode: 'VVO',
+    arriveAirPortCode: 'TLV',
+    departureDate: '9 окт 2018, Пт',
+    arriveDate: '10 окт 2018, Пт',
+    transfer: [],
+    img: logo,
+  },
+  {
+    price: 21032,
     arrive: '11:45',
     departure: '09:00',
     departureCity: 'Владивосток',

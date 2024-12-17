@@ -1,9 +1,11 @@
 .transferBox {
-  width: 200px;
+  width: 150px;
   display: flex;
   gap: 1px;
   flex-direction: column;
   align-items: center;
+  height: 88px;
+  justify-content: center;
 }
 
 .transferItem {

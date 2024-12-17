@@ -1,8 +1,7 @@
 export enum FILTER_BY_TRANSFER {
-  ALL = 'ALL',
-  WITHOUT = 'WITHOUT',
-  ZERO = 'ZERO',
-  ONE = 'ONE',
-  TWO = 'TWO',
-  THREE = 'THREE',
+  ALL = 'all',
+  WITHOUT = '0',
+  ONE = '1',
+  TWO = '2',
+  THREE = '3',
 }

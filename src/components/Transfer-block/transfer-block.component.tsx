@@ -13,12 +13,16 @@ export const TransferBlock = ({ transferInfo }: TTransferBlock) => {
   const isHasTransfer = !!transferInfo.length;
   return (
     <div className="transferBox">
-      {isHasTransfer && (
+      {isHasTransfer ? (
         <div className="transferInfo">
           <Text type="secondary">{transferInfo.length}</Text>
           <Text type="secondary">{`${
             transferInfo.length === 1 ? 'ПЕРЕСАДКА' : 'ПЕРЕСАДКИ'
           }`}</Text>
+        </div>
+      ) : (
+        <div className="transferInfo">
+          <Text type="secondary">ПРЯМОЙ</Text>
         </div>
       )}
       <div className="transferLine">
