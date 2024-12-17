@@ -4,16 +4,16 @@ import { TicketItem } from '../Ticket-item/ticket-item.component';
 import './ticket-list.css';
 
 type TTicketList = {
-  filterByPrice: FILTER_BY_PRICE;
+  filterByCurrency: FILTER_BY_PRICE;
 };
 
-export const TicketList = ({ filterByPrice }: TTicketList) => {
+export const TicketList = ({ filterByCurrency }: TTicketList) => {
   return (
     <div className="listContainer">
       {TICKETS.map((ticket) => (
         <TicketItem
           ticket={ticket}
-          filterByPrice={filterByPrice}
+          filterByCurrency={filterByCurrency}
           key={ticket.price}
         />
       ))}

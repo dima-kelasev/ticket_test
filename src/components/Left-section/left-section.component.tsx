@@ -5,11 +5,11 @@ import './left-section.css';
 
 type TLeftSection = {
   ticket: TTicketType;
-  filterByPrice: FILTER_BY_PRICE;
+  filterByCurrency: FILTER_BY_PRICE;
 };
 
-export const LeftSection = ({ ticket, filterByPrice }: TLeftSection) => {
-  const price = convertPrice({ filterByPrice, price: ticket.price });
+export const LeftSection = ({ ticket, filterByCurrency }: TLeftSection) => {
+  const price = convertPrice({ filterByCurrency, price: ticket.price });
 
   return (
     <div className="LeftSectionItemContainer">

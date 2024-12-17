@@ -6,13 +6,13 @@ import './ticket-item.css';
 
 type TTicketItem = {
   ticket: TTicketType;
-  filterByPrice: FILTER_BY_PRICE;
+  filterByCurrency: FILTER_BY_PRICE;
 };
 
-export const TicketItem = ({ ticket, filterByPrice }: TTicketItem) => {
+export const TicketItem = ({ ticket, filterByCurrency }: TTicketItem) => {
   return (
     <div className="ticketBlock">
-      <LeftSection ticket={ticket} filterByPrice={filterByPrice} />
+      <LeftSection ticket={ticket} filterByCurrency={filterByCurrency} />
       <RightSection ticket={ticket} />
     </div>
   );

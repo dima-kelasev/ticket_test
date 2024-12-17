@@ -6,7 +6,7 @@ import { FILTER_BY_PRICE } from '../../types/filte-by-price.type';
 import { FILTER_BY_TRANSFER } from '../../types/filter-by-transfer.type';
 
 export const Content = () => {
-  const [filterByPrice, setFilterByPrice] = useState(FILTER_BY_PRICE.RUB);
+  const [filterByCurrency, setFilterByCurrency] = useState(FILTER_BY_PRICE.RUB);
   const [filterByTransfer, setFilterByTransfer] = useState<
     FILTER_BY_TRANSFER | string[]
   >(['']);
@@ -14,10 +14,11 @@ export const Content = () => {
   return (
     <div className="container">
       <FiltersBar
-        setFilterByPrice={setFilterByPrice}
+        filterByCurrency={filterByCurrency}
+        setFilterByCurrency={setFilterByCurrency}
         setFilterByTransfer={setFilterByTransfer}
       />
-      <TicketList filterByPrice={filterByPrice} />
+      <TicketList filterByCurrency={filterByCurrency} />
     </div>
   );
 };
